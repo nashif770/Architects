@@ -1,64 +1,83 @@
 * { 
-font-family: 'Work Sans', sans-serif; }
+    font-family: 'Work Sans', sans-serif; 
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Work+Sans:wght@500&display=swap');
 
 body{
-    height: 4760px;
-    width: 1920px;
-    margin: 0 auto 0 auto;
-}
-
-/* navigation section*/
-.header_menu{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-items: center;
     align-items: center;
-    height: 150px;
-    width: 100%;
-    border: 2px solid black;
-    background-color:rgba(255, 144, 14, 0.1);
-}
+    max-width: 1920px;
 
-.logo{
-    margin-left: 200px;
-    padding: auto;
-    font-size: 3rem;
-    font-weight: 700;
-}
-.nav_tabs{
-    display: flex;
-    justify-content: center;
-    padding-right: 240px;
-    list-style-type: none;
-}
-
-.nav_tab{
-    margin-left: 70px;
-    font-size: 1rem; 
+    margin: auto;
 }
 
 /* banner section */
 .banner_section{
     display: flex;
     flex-direction: column;
+    justify-items: center;
     align-items: center;
-    height: 1440px;
+    height: 2140px;
+    width: 100%;
     background-color:rgba(255, 144, 14, 0.1);
 }
+
+/* navigation section inside banner section*/
+.header_menu{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+}
+
+.logo{
+    font-size: 45px;
+    font-weight: 700;
+    width: 100%;
+}
+.nav_tabs{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: end;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+}
+
+.nav_tab{
+    font-size: 26px;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.nav_tab:hover{
+    background-color: white;
+}
+
+/* navigation section end*/
 
 .content{
     display: flex;
     flex-direction: column;
+    column-gap: 5px;
     align-items: center;
     margin-bottom: 50px;
 }
 
 .banner_title{
     font-size: 4rem;
-    width: 600px;
+    max-width: 600px;
+    min-width: 40%;
     text-align: center;
-    margin-top: 116px;
 } 
 .banner_discrption{
     font-size: 1rem;
@@ -66,35 +85,167 @@ body{
     text-align: center;
     margin: 0px;
 }
-        /* this is the main button */
+        /* this is the main button inside banner section*/
 .primary_btn{
-    height: 64px;
+    height: 100px;
     width: 180px;
     background-color: #FF900E;
     border-radius: 10px;
     color: white;
     font-size: 20px;
     font-weight: 600;
+    border: none;
+    transition: width 1s, transform 1s;
 }
 
+.primary_btn:hover{
+    transform: rotate(360deg);
+    width: 240px;
+    color: #FF900E;
+    background-color: white;
+    border: 2px solid #FF900E;
+}
+
+        /* button end */
 .banner_img{
-    margin-top: 50px;
-    width: 100%;
+    margin-top: 150px;
+    max-width: 100%;
     margin-bottom: 45px;
 }
+/* banner section end*/
+
+/* bonus_section */
+
+.anime{ 
+    height: 100%;
+    width: 80%;
+    background-color: white;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.anime_window{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 90%;
+    margin-right: 140px;
+}
+
+.building1{
+    position: relative;
+    left: 400px;
+    height: 0;
+    width: 100px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.building2{
+    position: relative;
+    left: 200px;
+    height: 0;
+    width: 110px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.building3{
+    position: relative;
+    left: 240px;
+    height: 0;
+    width: 80px;
+    overflow: hidden;
+    z-index: 1;
+}
+.building4{
+    position: relative;
+    right: 50px;
+    height: 0;
+    width: 70px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.building5{
+    position: relative;
+    left: -100px;
+    height: 0;
+    width: 200px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.building6{
+    position: relative;
+    left: -150px;
+    height: 0;
+    width: 60px;
+    overflow: hidden;
+    z-index: 1;
+}
+.building7{
+    position: relative;
+    right: 50;
+    height: 0;
+    width: 80px;
+    overflow: hidden;
+    z-index: 1;
+}
+.anime:hover>.anime_window .building1{
+    height: 500px;
+    transition: height 2s;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.anime:hover>.anime_window .building2{
+    height: 400px;
+    transition: height 3s linear;
+    border: 2px solid black;
+    background-color: white;
+}
+.anime:hover>.anime_window .building3{
+    height: 440px;
+    transition: height 1s linear;
+    border: 2px solid black;
+    background-color: white;
+}
+.anime:hover>.anime_window .building4{
+    height: 530px;
+    transition: height 2s;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.anime:hover>.anime_window .building5{
+    height: 200px;
+    transition: height 3s linear;
+    border: 2px solid black;
+    background-color: white;
+}
+.anime:hover>.anime_window .building6{
+    height: 300px;
+    transition: height 1s linear;
+    border: 2px solid black;
+    background-color: white;
+}
+
+/* bonus_section end*/
+
 
 /* feature section */
-
 .feature_section{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     height: 1000px;
+    width: 80%;
+    margin-top: 100px;
 }
 .img_group{
-    display: flex;
-    flex-wrap: wrap;
-    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
 .feature_image{
     width: 342px;
@@ -127,30 +278,25 @@ body{
 
 /* blog start */
 
-.blog_section{
+.feature_blog_section{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
-    margin: 0;
-    height: 1200px;
-    width: 100%;
-    background-color: red
+    margin-top: 200px;
+    height: 1600px;
+    width: 90%;
 }
-.blogs{
-    height: 982px;
-    width: 586px;
-    margin: 0;  
-    margin-right: 150px;
+.blogs_section{
+    width: 80%;
 }
 .blog_section_title{
     border-left: 8px solid orange;
     padding-left: 20px;
 }
-
-
 .blog_discription{
     font-size: 1rem;
+    width: 100%;
 }
 
 .blog{
@@ -170,35 +316,38 @@ body{
 }
 
 .blog_content{
-    width: 100%;
     font-size: 1rem;
-    margin-top: 26px;
-    padding: 20px;
-    margin-bottom: 1000px;
+    margin-top: 25px;
+    margin-left: 20px;
 }
 
 .blog_image{
-    height: 1059px;
-    width: 800px;
-    margin: 0;
-    margin-right: 240px;
+    width: 100%;
+    margin-right: 50px;
 }
 
 /* special button */
 
-.featuer_btn{
+.feature_btn{
     position: relative;
-    top: -200px;
-    right: -760px;
-    height: 200px;
-    width: 342px;
+    top: -60px;
+    right: -50px;
+    height: 342px;
+    width: 200px;
     background-color: orange;
     border-radius: 8px;
-    font-size: 65px;
+    font-size: 2rem;
     line-height: 40px;
     color: white;
     font-weight: 800px;
     border: none;
+    transition: width 1s, transform 1s;
+}
+
+.feature_btn:hover{
+    height: 400px;
+    width: 258px;
+    transform: rotate(360deg)
 }
 
 .btn_text{
@@ -208,10 +357,11 @@ body{
     font-weight: 700px;
 }
 
+
 /* facts section */
 
 .facts_section{
-    height: 
+    width: 80%;
 }
 
 .facts_title{
@@ -263,6 +413,7 @@ body{
     justify-items: center;
     align-items: center;
     margin-top: 180px;
+    width: 80%;
 }
 
 .sponsor_title{
@@ -276,7 +427,10 @@ body{
 .sponsor_links{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    gap: 280px;
+    justify-content: center;
+
+    gap: 15%;
+    width: 80%;
     margin-bottom: 130px;
 }
 
@@ -290,15 +444,19 @@ body{
 
 .footer_section{
     display: flex;
-    justify-content: center;
-    justify-items: center;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 100px;
-    background-color: #FFF4E7;
+    height: 50px;
+    margin-bottom: 100px;
 }
 
 .footer_rights{
+    height: 50px;
+    width: 80%;
+    text-align: center;
+    padding-top: 30px;
+    background-color: #FFF4E7;
 
 }
 
