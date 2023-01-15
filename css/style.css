@@ -319,7 +319,7 @@ body{
             padding: 00px;
     
     }
-    
+}
 /* navigation section end */
 
 /* feature section */
@@ -653,7 +653,7 @@ body{
         grid-template-columns: repeat(1,1fr);
         gap: 25px;
 }
-
+}
 /* footer section */
 
 .footer_section{
@@ -674,5 +674,3 @@ body{
     background-color: #FFF4E7;
 
 }
-
-/* end */
