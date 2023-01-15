@@ -486,27 +486,34 @@ body{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 688px;
+        padding: 10px;
     }
     .blogs_section{
         width: 688px;
+        padding: 10px;
     }
     .blog_section_title{
         border-left: 8px solid orange;
         padding-left: 00px;
+        padding: 10px;
     }
     .blog_discription{
         font-size: 18px;
+        padding: 10px;
     }
     
     .blog{
         margin-left: 00px;
+        padding: 10px;
     }
     .blog_title{
         padding-left: 00px;
+        padding: 10px;
     }
     
     .blog_content{
         margin-left: 0px;
+        padding: 10px;
     }
     .blog_image{
         margin-top: 15px;
