@@ -1,4 +1,4 @@
-* { border: 2px solid red;
+* { 
     font-family: 'Work Sans', sans-serif; 
 }
 
@@ -14,6 +14,7 @@ body{
 
 /* banner section */
 .banner_section{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -27,20 +28,18 @@ body{
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
-    height: 150px;
     width: 100%;
 }
 
 .logo{
     font-size: 45px;
     font-weight: 700;
-    width: 100%;
 }
+
 .nav_tabs{
-    height: 100%;
-    width: 95%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-items: end;
+    gap: 2vw;
     justify-content: end;
     align-items: center;
     list-style-type: none;
@@ -58,6 +57,24 @@ body{
 
 .nav_tab:hover{
     background-color: white;
+}
+
+/* small devices */
+
+@media only screen and (max-width: 698px) {
+    .header_menu{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+        row-gap: 10px;
+    }
+    .nav_tabs{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
 }
 
 /* navigation section end*/
@@ -81,28 +98,28 @@ body{
     text-align: center;
     margin: 0px;
 }
-        /* this is the main button inside banner section*/
-.primary_btn{
-    height: 100px;
-    width: 180px;
-    background-color: #FF900E;
-    border-radius: 10px;
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-    border: none;
-    transition: width 1s, transform 1s;
-}
+    /* primary button start*/
+    .primary_btn{
+        height: 100px;
+        width: 180px;
+        background-color: #FF900E;
+        border-radius: 10px;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        border: none;
+        transition: width 1s, transform 1s;
+    }
 
-.primary_btn:hover{
-    transform: rotate(360deg);
-    width: 240px;
-    color: #FF900E;
-    background-color: white;
-    border: 2px solid #FF900E;
-}
+    .primary_btn:hover{
+        transform: rotate(360deg);
+        width: 240px;
+        color: #FF900E;
+        background-color: white;
+        border: 2px solid #FF900E;
+    }
+    /* primary button end*/
 
-        /* button end */
 .banner_img{
     margin-top: 40px;
     max-width: 100%;
@@ -110,138 +127,132 @@ body{
 }
 /* banner section end*/
 
+    /* bonus_section */
 
+    .anime{ 
+        height: 700px;
+        width: 80%;
+        background-color: white;
+        border: 2px solid black;
+        margin-bottom: 10px;
+    }
+    .anime_title{
+        width: 600px;
+        text-align: center;
+        padding: 30px;
+    }
+    .anime_window{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+        width: 100%;
+        margin-right: 140px;
+    }
 
+    .building1{
+        position: relative;
+        left: 480px;
+        height: 0;
+        width: 100px;
+        z-index: 1;
+    }
 
+    .building2{
+        position: relative;
+        left: 400px;
+        height: 0;
+        width: 110px;
+        z-index: 1;
+    }
 
+    .building3{
+        position: relative;
+        left: 240px;
+        height: 0;
+        width: 80px;
+        z-index: 1;
+    }
+    .building4{
+        position: relative;
+        right: 50px;
+        height: 0;
+        width: 70px;
+        z-index: 2;
+    }
 
-/* bonus_section */
+    .building5{
+        position: relative;
+        left: -100px;
+        height: 0;
+        width: 200px;
+        overflow: hidden;
+        z-index: 1;
+    }
 
-.anime{ 
-    height: 700px;
-    width: 80%;
-    background-color: white;
-    border: 2px solid black;
-    margin-bottom: 10px;
-}
-.anime_title{
-    width: 300px;
-    text-align: center;
-    padding: 30px;
-}
-.anime_window{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 90%;
-    margin-right: 140px;
-}
+    .building6{
+        position: relative;
+        left: -150px;
+        height: 0;
+        width: 60px;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .building7{
+        position: relative;
+        height: 0;
+        left: -300px;
+        width: 80px;
+        z-index: 1;
+    }
+    .anime:hover>.anime_window .building1{
+        height: 80%;
+        transition: height 1.5s;
+        border: 2px solid black;
+        background-color: white;
+    }
 
-.building1{
-    position: relative;
-    left: 400px;
-    height: 0;
-    width: 100px;
-    overflow: hidden;
-    z-index: 1;
-}
+    .anime:hover>.anime_window .building2{
+        height: 60%;
+        transition: height 2.8s linear;
+        border: 2px solid black;
+        background-color: white;
+    }
+    .anime:hover>.anime_window .building3{
+        height: 90%;
+        transition: height 1.5s linear;
+        border: 2px solid black;
+        background-color: white;
+    }
+    .anime:hover>.anime_window .building4{
+        height: 50%;
+        transition: height 2.1s;
+        border: 2px solid black;
+        background-color: white;
+    }
 
-.building2{
-    position: relative;
-    left: 200px;
-    height: 0;
-    width: 110px;
-    overflow: hidden;
-    z-index: 1;
-}
+    .anime:hover>.anime_window .building5{
+        height: 40%;
+        transition: height 2.5s linear;
+        border: 2px solid black;
+        background-color: white;
+    }
+    .anime:hover>.anime_window .building6{
+        height: 65%;
+        transition: height 1s linear;
+        border: 2px solid black;
+        background-color: white;
+    }
+    .anime:hover>.anime_window .building7{
+        height: 53%;
+        transition: height 1s linear;
+        border: 2px solid black;
+        background-color: white;
+    }
+    /* bonus_section end*/
 
-.building3{
-    position: relative;
-    left: 240px;
-    height: 0;
-    width: 80px;
-    overflow: hidden;
-    z-index: 1;
-}
-.building4{
-    position: relative;
-    right: 50px;
-    height: 0;
-    width: 70px;
-    overflow: hidden;
-    z-index: 2;
-}
-
-.building5{
-    position: relative;
-    left: -100px;
-    height: 0;
-    width: 200px;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.building6{
-    position: relative;
-    left: -150px;
-    height: 0;
-    width: 60px;
-    overflow: hidden;
-    z-index: 1;
-}
-.building7{
-    position: relative;
-    height: 0;
-    left: -140px;
-    width: 80px;
-    z-index: 1;
-}
-.anime:hover>.anime_window .building1{
-    height: 80%;
-    transition: height 1.5s;
-    border: 2px solid black;
-    background-color: white;
-}
-
-.anime:hover>.anime_window .building2{
-    height: 60%;
-    transition: height 2.8s linear;
-    border: 2px solid black;
-    background-color: white;
-}
-.anime:hover>.anime_window .building3{
-    height: 90%;
-    transition: height 1.5s linear;
-    border: 2px solid black;
-    background-color: white;
-}
-.anime:hover>.anime_window .building4{
-    height: 50%;
-    transition: height 2.1s;
-    border: 2px solid black;
-    background-color: white;
-}
-
-.anime:hover>.anime_window .building5{
-    height: 40%;
-    transition: height 2.5s linear;
-    border: 2px solid black;
-    background-color: white;
-}
-.anime:hover>.anime_window .building6{
-    height: 35%;
-    transition: height 1s linear;
-    border: 2px solid black;
-    background-color: white;
-}
-.anime:hover>.anime_window .building7{
-    height: 53%;
-    transition: height 1s linear;
-    border: 2px solid black;
-    background-color: white;
-}
-/* bonus_section end*/
-
+/* navigation section end */
 
 /* feature section */
 .feature_section{
@@ -289,15 +300,44 @@ body{
 .feature_button{
     margin-top: 10px;
 }
+/* small devices */
 
-/* blog start */
+@media only screen and (max-width: 688px) {
+    .feature_section{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-items: end;
+        align-items: center;
+        width: 70%;
+        margin-top: 50px;
+    }
+    
+    .img_group{
+        margin-bottom: 30px;
+    }
+    .feature_content{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+        margin-left: 0px;
+    }
+    .feature_discription{
+        font-size: 1rem;
+        width: 100%;
+    }
+}
+
+/* feature section end*/
+
+/* feauter blog start */
 
 .feature_blog_section{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
-    margin-top: 140px;
+    margin-top: 80px;
     width: 90%;
 }
 .blogs_section{
@@ -368,24 +408,62 @@ body{
     font-weight: 700px;
 }
 
+/* small devices */
 
-/* facts section */
+@media only screen and (max-width: 688px) {
+    .feature_blog_section{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    .blog_image{
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+    .blog_content{
+        font-size: 1rem;
+        margin-top: 10px;
+        margin-left: 00px;
+    }
+    .feature_btn{
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        width: 142px;
+        margin: 10px;
+        margin-bottom: 50px;
+    }
+}
+
+
+/* feature blog section end */
+
+/* facts section start */
 
 .facts_section{
     width: 80%;
+    margin: 0;
+    height: 100%;
+}
+
+.facts_title{
+    font-weight: 700;
 }
 
 .facts_description{
     width: 542px;
+    margin: 0;
 }
 
 .facts_unit{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 124 px;
     justify-items: center;
     align-items: center;
-    height: 300px;
     margin-top: 50px;
 }
 
@@ -399,6 +477,38 @@ body{
     border: 1px solid orange;
     border-radius: 10px;
 }
+
+/* small devices */
+
+@media only screen and (max-width: 688px) {
+    .facts_section{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    .fact_title{
+        align-items: center;
+        text-align: center;
+    }
+    .facts_description{
+        width: 100%;
+        text-align: center;
+    }
+    .facts_unit{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        justify-items: center;
+        align-items: center;
+    }
+    .fact{
+        height: 241px;
+        width: 241px;
+    }
+}
+
+
 .fact:hover{
     border: 10px solid orange;
     height: 200px;
@@ -425,39 +535,53 @@ body{
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    margin-top: 100px;
-    width: 80%;
+    margin-top: 50px;
 }
 
 .sponsor_title{
     margin-bottom: 24px;
+    width: 100%;
 }
 
 .sponsor_description{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    padding: 10px;
 }
 
 .sponsor_links{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    justify-content: center;
+    justify-items: center;
     align-items: center;
-    gap: 05%;
-    width: 80%;
-    margin-bottom: 130px;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 .sponsor{
-    height: 50px;
-    width: 153px;
-
+    height: 60px;
+    margin-top: 30px;
 }
 
-.sponsor:hover{
-    border: 2px solid blue;
-    height: 50px;
-    width: 173px;
 
+/* small devices */
+
+@media only screen and (max-width: 688px) {
+    .sponsors_section{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    .sponsor_title{
+        text-align: center;
+    }
+    .sponsor_links{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+    }
 }
 
 /* footer section */
